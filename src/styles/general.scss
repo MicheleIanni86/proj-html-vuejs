@@ -1,0 +1,12 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@import "bootstrap/scss/bootstrap";
+
+// GENERAL SETS-------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+// -------------------------------------------------
