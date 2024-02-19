@@ -60,8 +60,37 @@ export default {
 
 
     <!-- // THIRD LINE HEADER-------------------------------------- -->
-    <div class="third-line-link"></div>
+    <div class="third-line-link d-flex">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="hamnurger-menu"><i class="fa-solid fa-bars"></i></div>
+
+            <div>
+                <ul class="d-flex gap-5 ">
+                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-house-chimney"></i> HOME</li>
+                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-suitcase"></i> LIFESTYLE <i
+                            class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-book-open-reader"></i> STORIES
+                        <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-book"></i> PAGES <i
+                            class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-user"></i> ABOUT US</li>
+                </ul>
+            </div>
+
+            <div class="logo-search"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+        </div>
+    </div>
 </template>
+
+
+
+
+
 
 <style lang="scss" scoped>
 .bord {
@@ -109,6 +138,7 @@ export default {
         text-align: center;
         line-height: 30px;
         border-radius: 50%;
+        cursor: pointer;
 
     }
 }
@@ -129,7 +159,30 @@ export default {
 
 // THIRD LINE HEADER--------------------------------------
 .third-line-link {
+    color: #333333;
     height: 52px;
     border-bottom: 2px solid #f4f4f4;
+
+    .hamnurger-menu,
+    .logo-search {
+        font-size: 30px;
+    }
+
+    .hamnurger-menu:hover,
+    .logo-search:hover {
+        color: #bf1d2e;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li:hover {
+            cursor: pointer;
+            color: #bf1d2e;
+        }
+    }
 }
 </style>
