@@ -33,7 +33,7 @@ export default {
             <div class="news-updates d-flex align-items-center me-auto">
                 <div class=" d-flex align-items-center fw-bold text-white px-3">NEW UPDATES</div>
                 <img src="../assets/img/meal-time-150x150.webp" alt="meal-time">
-                <p>5:35 THE_</p>
+                <p>5:35 THE _</p>
             </div>
 
             <div class="change-updates d-flex gap-4 align-items-center me-5">
