@@ -1,6 +1,7 @@
 <script>
 import { store } from '../store';
 import CardSliderComp from './CardSliderComp.vue';
+import JumboGridComp from './JumboGridComp.vue';
 
 export default {
     data() {
@@ -11,7 +12,7 @@ export default {
     },
 
 
-    components: { CardSliderComp },
+    components: { CardSliderComp, JumboGridComp },
 
     created() {
 
@@ -29,6 +30,11 @@ export default {
 
 <template>
     <CardSliderComp></CardSliderComp>
+    <JumboGridComp></JumboGridComp>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.bord {
+    border: 1px dashed red;
+}
+</style>

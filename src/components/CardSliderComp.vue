@@ -1,12 +1,12 @@
 <script>
-// import { store } from '../store';
+import { store } from '../store';
 
 
 
 export default {
     data() {
         return {
-            // store,
+            store,
             cardsSlide: [
                 {
                     image: 'healthy-foods.webp',
@@ -60,7 +60,7 @@ export default {
 
 <template>
     <!-- SLIDER CON CARD -->
-    <div class="carousel-item active px-5">
+    <div class="slider  px-5">
         <div class="row my-5">
             <div v-for="cardSlide in cardsSlide" class="col-3">
 
@@ -101,7 +101,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.carousel-item {
+.slider {
+    padding: 10px;
     background-color: #f3f3f3;
     position: relative;
 
@@ -121,7 +122,7 @@ export default {
 
 .card-image-container {
     position: relative;
-    position: relative;
+
     width: 100%;
     height: auto;
     overflow: hidden;
