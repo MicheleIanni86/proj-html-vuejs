@@ -1,11 +1,17 @@
 <script>
 import { store } from './store';
 
+import HeaderComp from './components/HeaderComp.vue';
+import MainComp from './components/MainComp.vue';
+import FooterComp from './components/FooterComp.vue';
+
 export default {
   data() {
     return { store };
 
   },
+
+  components: { HeaderComp, MainComp, FooterComp },
 
 
 
@@ -14,7 +20,9 @@ export default {
 </script>
 
 <template>
-  <h1>Ciao!!!</h1>
+  <HeaderComp></HeaderComp>
+  <MainComp></MainComp>
+  <FooterComp></FooterComp>
 </template>
 
 <style lang="scss">
