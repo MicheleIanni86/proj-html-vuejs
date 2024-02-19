@@ -51,7 +51,12 @@ export default {
     </div>
 
     <!-- // SECOND LINE HEADER-------------------------------------- -->
-    <div class="second-line-banner"></div>
+    <div class="second-line-banner d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <img src="../assets/img/anime-logo.webp" alt="anime logo">
+            <img src="../assets/img/header-banner.webp" alt="anime logo">
+        </div>
+    </div>
 
 
     <!-- // THIRD LINE HEADER-------------------------------------- -->
@@ -108,16 +113,18 @@ export default {
     }
 }
 
-
-
-
-
-
-
 // SECOND LINE HEADER--------------------------------------
 .second-line-banner {
     height: 120px;
     border-bottom: 2px solid #f4f4f4;
+
+    img:first-child {
+        height: 65px;
+    }
+
+    img:last-child {
+        border-radius: 10px;
+    }
 }
 
 // THIRD LINE HEADER--------------------------------------
