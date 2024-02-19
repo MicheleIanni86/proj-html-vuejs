@@ -1,5 +1,6 @@
 <script>
 import { store } from '../store';
+import CardSliderComp from './CardSliderComp.vue';
 
 export default {
     data() {
@@ -10,6 +11,7 @@ export default {
     },
 
 
+    components: { CardSliderComp },
 
     created() {
 
@@ -25,6 +27,8 @@ export default {
 
 </script>
 
-<template></template>
+<template>
+    <CardSliderComp></CardSliderComp>
+</template>
 
 <style lang="scss" scoped></style>
