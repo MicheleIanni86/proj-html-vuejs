@@ -8,6 +8,8 @@ export default {
         return {
             store,
             mainImage: './src/assets/img/sddefault.webp',
+            imagePageYoutube: './src/assets/img/Cattura.PNG',
+            logoTV: './src/assets/img/channels4_profile.jpg',
             thumbsYoutube: [
                 {
                     id: 1,
@@ -62,11 +64,34 @@ export default {
         <div class="container-youtube rounded-3 d-flex mb-5 ">
             <div class="main-image d-flex">
                 <img :src="mainImage" alt="">
+                <div class="title-main ">
+                    <div class="left-title-main">
+                        <img :src="logoTV" alt="">
+                        <p class=" fw-bolder">{{ thumbsYoutube[0].text }}</p>
+                    </div>
+
+                    <div class="right-title-main d-flex justify-content-center">
+                        <div class="text-center">
+                            <p class="m-0"><i class="fa-solid fa-clock "></i></p>
+                            <p class="m-0">Guarda più...</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="m-0"><i class="fa-solid fa-share "></i></p>
+                            <p class="m-0">Condividi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-play">
+                    <div> <i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="view-on-youtube">
+                    <img :src="imagePageYoutube" alt="">
+                </div>
             </div>
 
             <div class="list-videos d-flex flex-column ">
                 <div class="list-head d-flex align-items-center text-white">
-                    <div class="mx-4 display-5"><i class="fa-solid fa-play"></i></div>
+                    <div class="mx-4"><i class="fa-solid fa-play fs-3"></i></div>
                     <div class="info-list-video">
                         <p class="m-0 fw-bold fs-5">Video Playlist</p>
                         <p class="m-0">1/6 Videos</p>
@@ -108,12 +133,66 @@ export default {
 .main-image {
     width: 70%;
     height: 500px;
+    position: relative;
 
     img {
         width: 100%;
         object-fit: cover;
+    }
 
+    .view-on-youtube {
+        position: absolute;
+        bottom: 1px;
+        left: 20px;
+    }
 
+    .center-play {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 30px;
+        background-color: red;
+        padding: 5px 40px;
+        border-radius: 25%;
+        cursor: pointer;
+    }
+
+    .title-main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        color: #f3f3f3;
+
+    }
+
+    .left-title-main {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        left: 20px;
+
+        img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .right-title-main {
+        position: absolute;
+        right: 40px;
     }
 }
 
