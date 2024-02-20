@@ -17,3 +17,14 @@ body {
     
 }
 // -------------------------------------------------
+
+.big-banner {
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+    padding: 30px;
+    
+    img {
+        border-radius: 50px;
+    }
+}
