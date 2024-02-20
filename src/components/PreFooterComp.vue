@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-    <div class="row mx-4 mb-3">
+    <div class="row mx-4 mb-2">
         <div class="col-2 img-square" v-for="square in imagesSquare">
             <img :src="getPathImage(square.image)" alt="">
             <div>{{ square.text }}</div>
@@ -74,6 +74,7 @@ export default {
         max-width: 100%;
         border-radius: 15px;
         filter: brightness(50%);
+        opacity: 0.8;
     }
 
     div {
