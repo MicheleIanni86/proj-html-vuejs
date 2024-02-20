@@ -5,6 +5,7 @@ import JumboGridComp from './JumboGridComp.vue';
 import CarouselComp from './CarouselComp.vue';
 import FeaturedPostsComp from './FeaturedPostsComp.vue';
 import YoutubeComp from './YoutubeComp.vue';
+import PreFooter from './PreFooter.vue';
 
 export default {
     data() {
@@ -14,7 +15,7 @@ export default {
     },
 
 
-    components: { CardSliderComp, JumboGridComp, CarouselComp, FeaturedPostsComp, YoutubeComp },
+    components: { CardSliderComp, JumboGridComp, CarouselComp, FeaturedPostsComp, YoutubeComp, PreFooter },
 
     created() {
 
@@ -41,6 +42,7 @@ export default {
 
     <FeaturedPostsComp></FeaturedPostsComp>
     <YoutubeComp></YoutubeComp>
+    <PreFooter></PreFooter>
 </template>
 
 <style lang="scss" scoped>
