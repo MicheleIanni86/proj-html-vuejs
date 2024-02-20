@@ -4,18 +4,17 @@ import CardSliderComp from './CardSliderComp.vue';
 import JumboGridComp from './JumboGridComp.vue';
 import CarouselComp from './CarouselComp.vue';
 import FeaturedPostsComp from './FeaturedPostsComp.vue';
+import YoutubeComp from './YoutubeComp.vue';
 
 export default {
     data() {
         return {
             store,
-
-
         };
     },
 
 
-    components: { CardSliderComp, JumboGridComp, CarouselComp, FeaturedPostsComp },
+    components: { CardSliderComp, JumboGridComp, CarouselComp, FeaturedPostsComp, YoutubeComp },
 
     created() {
 
@@ -41,6 +40,7 @@ export default {
     </div>
 
     <FeaturedPostsComp></FeaturedPostsComp>
+    <YoutubeComp></YoutubeComp>
 </template>
 
 <style lang="scss" scoped>
