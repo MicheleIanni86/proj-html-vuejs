@@ -2,6 +2,7 @@
 import { store } from '../store';
 import CardSliderComp from './CardSliderComp.vue';
 import JumboGridComp from './JumboGridComp.vue';
+import CarouselComp from './CarouselComp.vue';
 
 export default {
     data() {
@@ -12,7 +13,7 @@ export default {
     },
 
 
-    components: { CardSliderComp, JumboGridComp },
+    components: { CardSliderComp, JumboGridComp, CarouselComp },
 
     created() {
 
@@ -31,6 +32,7 @@ export default {
 <template>
     <CardSliderComp></CardSliderComp>
     <JumboGridComp></JumboGridComp>
+    <CarouselComp></CarouselComp>
 </template>
 
 <style lang="scss" scoped>
