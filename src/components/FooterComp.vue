@@ -139,6 +139,10 @@ ul {
             font-weight: bolder;
         }
 
+        a:hover {
+            color: #333333;
+        }
+
         li {
             padding-bottom: 8px;
         }
@@ -148,6 +152,7 @@ ul {
             font-size: 18px;
             pointer-events: none;
         }
+
     }
 
     .subscribe-form {
