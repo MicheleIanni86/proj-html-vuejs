@@ -108,6 +108,12 @@ export default {
 .card {
     border: none;
     background-color: #f3f3f3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .card-body {

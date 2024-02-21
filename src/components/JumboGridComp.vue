@@ -180,10 +180,14 @@ export default {
     .opacity-hover {
         opacity: 0.4;
         cursor: pointer;
+        transition: transform 0.5s ease-in-out;
     }
 
     .opacity-hover:hover {
         opacity: 1;
+        transform: scale(1.02);
+        cursor: pointer;
+        z-index: 1;
     }
 }
 </style>

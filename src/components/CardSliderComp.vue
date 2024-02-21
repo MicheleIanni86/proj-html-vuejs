@@ -102,6 +102,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
 
+
     img {
         width: 100%;
         height: 100%;
@@ -128,6 +129,10 @@ export default {
             border-radius: 5px;
         }
     }
+}
+
+.card-image-container:hover {
+    opacity: 0.5;
 }
 
 

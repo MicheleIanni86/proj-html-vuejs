@@ -3,7 +3,7 @@ export const store = reactive({
 
     bigBanner: './src/assets/img/page-banner-1.webp',
 
-    // ARRAY PER CardSliderComp.vue-------------------------------------
+    // ARRAY PER CardSliderComp.vue-----------------------------------
     cardsSlide: [
         {
             image: 'healthy-foods.webp',
@@ -100,7 +100,7 @@ export const store = reactive({
         },
 
     ],
-    // ARRAY PER FeaturedPostsComp.vue-------------------------------------
+    // ARRAY PER FeaturedPostsComp.vue--------------------------------
     cardsPosts: [
         {
             image: 'ideas-anime.webp',
@@ -157,7 +157,7 @@ export const store = reactive({
             text: 'Play The Funk Music White Boy - Official Trailer | AniTV'
         },
     ],
-    // ARRAY PER PreFooterComp.vue-------------------------------------
+    // ARRAY PER PreFooterComp.vue-----------------------------------
     imagesSquare: [
         {
             image: 'anime-fashion.webp',

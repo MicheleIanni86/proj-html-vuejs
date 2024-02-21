@@ -9,6 +9,12 @@ export default {
   data() {
     return { store };
 
+
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   },
 
   components: { HeaderComp, MainComp, FooterComp },
@@ -23,6 +29,11 @@ export default {
   <HeaderComp></HeaderComp>
   <MainComp></MainComp>
   <FooterComp></FooterComp>
+  <div>
+    <b-button class="btn-round" variant="primary" @click="scrollToTop">
+      <i class="fa-solid fa-angles-up"></i> Su
+    </b-button>
+  </div>
 </template>
 
 <style lang="scss">
