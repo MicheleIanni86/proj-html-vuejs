@@ -75,7 +75,7 @@ export default {
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-date">{{ post.date }}</p>
                         <p class="card-text">{{ post.description }}</p>
-                        <button href="#" class="btn">Read More</button>
+                        <button href="#" class="btn btn-hover">Read More</button>
                     </div>
                     <div class="budges d-flex gap-4">
                         <span v-for="badge in post.badges">{{ badge }}</span>
@@ -146,6 +146,10 @@ export default {
         color: white;
         font-weight: bolder;
         padding: 5px 30px;
+    }
+
+    .btn-hover:hover {
+        background-color: #525252;
     }
 }
 </style>
