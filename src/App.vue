@@ -1,5 +1,4 @@
 <script>
-import 'animate.css';
 import { store } from './store';
 
 import HeaderComp from './components/HeaderComp.vue';

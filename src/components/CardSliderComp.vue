@@ -69,7 +69,7 @@ export default {
     <!-- SLIDER CON CARD -->
     <div class="slider  px-5">
         <div class="row my-5">
-            <div v-for="cardSlide in cardsSlide" class="col-3 card-transition">
+            <div v-for="cardSlide in cardsSlide" class="col-3 animate__animated animate__fadeIn">
 
                 <div class="card text-center border-0">
                     <div class="card-image-container" style="position: relative;">
