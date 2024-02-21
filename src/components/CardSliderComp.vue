@@ -49,6 +49,13 @@ export default {
     methods: {
         getImagePath(image) {
             return `./src/assets/img/${image}`;
+        },
+
+        nextSlide() {
+            this.cardsSlide.push(this.cardsSlide.shift());
+        },
+        prevSlide() {
+            this.cardsSlide.unshift(this.cardsSlide.pop());
         }
 
 
@@ -62,7 +69,7 @@ export default {
     <!-- SLIDER CON CARD -->
     <div class="slider  px-5">
         <div class="row my-5">
-            <div v-for="cardSlide in cardsSlide" class="col-3">
+            <div v-for="cardSlide in cardsSlide" class="col-3 card-transition">
 
                 <div class="card text-center border-0">
                     <div class="card-image-container" style="position: relative;">
@@ -85,14 +92,14 @@ export default {
         </div>
 
         <!-- PULSANTE NEXT -->
-        <div class="arrow-prev z-3">
-            <div class="d-flex justify-content-center align-items-center bg-white text-dark boxArrow">
+        <div class="arrow-prev z-3" @click="nextSlide">
+            <div class=" d-flex justify-content-center align-items-center bg-white text-dark boxArrow">
                 <i class="fa-solid fa-chevron-left"></i>
             </div>
         </div>
 
         <!-- PULSANTE PREV -->
-        <div class="arrow-next z-3">
+        <div class="arrow-next z-3" @click="prevSlide">
             <div class="d-flex justify-content-center align-items-center bg-white text-dark boxArrow">
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
@@ -117,6 +124,10 @@ export default {
         font-weight: bold;
         color: gray;
     }
+
+
+
+
 }
 
 
