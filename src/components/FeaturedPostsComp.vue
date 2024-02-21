@@ -41,6 +41,13 @@ export default {
     methods: {
         getImagePath(image) {
             return `../src/assets/img/${image}`;
+        },
+
+        nextSlide() {
+            this.cardsPosts.push(this.cardsPosts.shift());
+        },
+        prevSlide() {
+            this.cardsPosts.unshift(this.cardsPosts.pop());
         }
 
     },
@@ -53,8 +60,8 @@ export default {
     <div class="container mb-1 d-flex justify-content-between mb-1 align-items-center">
         <h4 class="fw-bold m-0">FEATURED POSTS</h4>
         <div class="top-badges-intro d-flex gap-3 align-items-center">
-            <div class="button-prev"><i class="fa-solid fa-circle-chevron-left"></i></div>
-            <div class="button-next"><i class="fa-solid fa-circle-chevron-right"></i></div>
+            <div class="button-prev"><i class="fa-solid fa-circle-chevron-left" @click="nextSlide"></i></div>
+            <div class="button-next"><i class="fa-solid fa-circle-chevron-right" @click="prevSlide"></i></div>
         </div>
     </div>
 
