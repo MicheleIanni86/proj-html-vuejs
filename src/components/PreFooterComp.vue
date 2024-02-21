@@ -8,50 +8,10 @@ export default {
         return {
             store,
             imgActive: 0,
-            imagesSquare: [
-                {
-                    image: 'anime-fashion.webp',
-                    text: 'FASHION',
-                    post: '4 POSTS'
-
-                },
-                {
-                    image: 'success-story.webp',
-                    text: 'CULTURE',
-                    post: '2 POSTS'
-                },
-                {
-                    image: 'healthy-foods.webp',
-                    text: 'FOOD',
-                    post: '3 POSTS'
-                },
-                {
-                    image: 'visit-france.webp',
-                    text: 'LIFESTYLE',
-                    post: '1 POST'
-                },
-                {
-                    image: 'travel-alone.webp',
-                    text: 'STORIES',
-                    post: '4 POSTS'
-                },
-                {
-                    image: 'best-places.webp',
-                    text: 'TRAVEL',
-                    post: '5 POSTS'
-                },
-            ]
         };
     },
 
-
-
-
-
-
     created() {
-
-
     },
 
     methods: {
@@ -70,7 +30,7 @@ export default {
 
 <template>
     <div class="row mx-4 mb-2">
-        <div class="col-2 img-square" v-for="(square, index) in imagesSquare">
+        <div class="col-2 img-square" v-for="(square, index) in store.imagesSquare">
             <img :src="getPathImage(square.image)" :class="index == imgActive ? 'square-hover' : ''" alt=""
                 @mouseenter="clickImage(index)">
             <div class="text">{{ square.text }}</div>

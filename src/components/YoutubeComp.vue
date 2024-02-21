@@ -9,50 +9,14 @@ export default {
             store,
             mainImage: './src/assets/img/sddefault.webp',
             imagePageYoutube: './src/assets/img/Cattura.PNG',
-            logoTV: './src/assets/img/channels4_profile.jpg',
-            thumbsYoutube: [
-                {
-                    id: 1,
-                    image: './src/assets/img/default.webp',
-                    text: 'Overlord Season 4 - Official Trailer 3 | AniTV'
-                },
-                {
-                    id: 2,
-                    image: './src/assets/img/hqdefault (1).jpg',
-                    text: 'Reant A Girlfriend Season 2 - Official Trailer | AniTV'
-                },
-                {
-                    id: 3,
-                    image: './src/assets/img/rice-ball.webp',
-                    text: 'Uncle From Another World - Official Trailer 2 | AniTV'
-                },
-                {
-                    id: 4,
-                    image: './src/assets/img/travel-alone-300x200.webp',
-                    text: 'Prima Doll - Official Trailer | AniTV'
-                },
-                {
-                    id: 5,
-                    image: './src/assets/img/ideas-anime.webp',
-                    text: 'Shoot! Goal To The Future - Official Trailer | AniTV'
-                },
-                {
-                    id: 6,
-                    image: './src/assets/img/best-places-300x200.webp',
-                    text: 'Play The Funk Music White Boy - Official Trailer | AniTV'
-                },
-            ]
+            logoTV: './src/assets/img/channels4_profile.jpg'
         };
     },
 
     created() {
-
-
     },
 
     methods: {
-
-
     },
 };
 
@@ -67,7 +31,7 @@ export default {
                 <div class="title-main ">
                     <div class="left-title-main">
                         <img :src="logoTV" alt="">
-                        <p class=" fw-bolder">{{ thumbsYoutube[0].text }}</p>
+                        <p class=" fw-bolder">{{ store.thumbsYoutube[0].text }}</p>
                     </div>
 
                     <div class="right-title-main d-flex justify-content-center">
@@ -99,7 +63,7 @@ export default {
                 </div>
                 <div class="container-list ">
 
-                    <div class="thumb-video " v-for="thumb in thumbsYoutube">
+                    <div class="thumb-video " v-for="thumb in store.thumbsYoutube">
 
                         <div class="numId">{{ thumb.id }}</div>
                         <div class="box-image">

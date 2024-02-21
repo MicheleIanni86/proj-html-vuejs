@@ -10,22 +10,15 @@ import PreFooterComp from './PreFooterComp.vue';
 
 export default {
     data() {
-        return {
-            store,
-        };
+        return { store };
     },
-
 
     components: { CardSliderComp, JumboGridComp, CarouselComp, FeaturedPostsComp, YoutubeComp, PreFooterComp },
 
     created() {
-
-
     },
 
     methods: {
-
-
     },
 };
 
@@ -46,8 +39,4 @@ export default {
     <PreFooterComp></PreFooterComp>
 </template>
 
-<style lang="scss" scoped>
-.bord {
-    border: 1px dashed red;
-}
-</style>
+<style lang="scss" scoped></style>

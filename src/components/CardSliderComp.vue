@@ -5,45 +5,10 @@ import { store } from '../store';
 
 export default {
     data() {
-        return {
-            store,
-            cardsSlide: [
-                {
-                    image: 'healthy-foods.webp',
-                    title: 'The Best Healthy Foods In 2022',
-                    date: 'January 11, 2024',
-                    badges: ['Food']
-                },
-                {
-                    image: 'winter.webp',
-                    title: 'The Best Winter Outfits',
-                    date: 'January 28, 2024',
-                    badges: ['Fashion']
-                },
-                {
-                    image: 'photographers-mistakes.webp',
-                    title: 'Beginner Photographer\'s Mistakes',
-                    date: 'February 7, 2024',
-                    badges: ['Fashion']
-                },
-                {
-                    image: 'ideas-anime.webp',
-                    title: 'Live Ideas You Might Be Anime',
-                    date: 'February 19, 2024',
-                    badges: ['Culture', 'Stories']
-                },
-            ]
-        };
+        return { store };
     },
 
-
-
-
-
-
     created() {
-        console.log(this.cardsSlide);
-
     },
 
     methods: {
@@ -52,13 +17,11 @@ export default {
         },
 
         nextSlide() {
-            this.cardsSlide.push(this.cardsSlide.shift());
+            store.cardsSlide.push(store.cardsSlide.shift());
         },
         prevSlide() {
-            this.cardsSlide.unshift(this.cardsSlide.pop());
+            store.cardsSlide.unshift(store.cardsSlide.pop());
         }
-
-
     },
 };
 
@@ -69,7 +32,7 @@ export default {
     <!-- SLIDER CON CARD -->
     <div class="slider  px-5">
         <div class="row my-5">
-            <div v-for="cardSlide in cardsSlide" class="col-3">
+            <div v-for="cardSlide in store.cardsSlide" class="col-3">
 
                 <div class="card text-center border-0">
                     <div class="card-image-container" style="position: relative;">

@@ -3,22 +3,13 @@ import { store } from '../store';
 
 export default {
     data() {
-        return {
-            store,
-
-        };
+        return { store };
     },
 
-
-
     created() {
-
-
     },
 
     methods: {
-
-
     },
 };
 
@@ -66,19 +57,44 @@ export default {
             <div class="hamnurger-menu"><i class="fa-solid fa-bars"></i></div>
 
             <div>
+
                 <ul class="d-flex gap-5 ">
-                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-house-chimney"></i> HOME</li>
-                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-suitcase"></i> LIFESTYLE <i
-                            class="fa-solid fa-angle-down"></i>
+
+                    <li class="d-flex gap-2 align-items-center fw-bold btn"><i class="fa-solid fa-house-chimney"></i> HOME
                     </li>
-                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-book-open-reader"></i> STORIES
-                        <i class="fa-solid fa-angle-down"></i>
+
+                    <li class="d-flex gap-2 align-items-center fw-bold btn dropdown dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown"><i class="fa-solid fa-suitcase"></i> LIFESTYLE
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Lifestyle Anime</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion Statue</a></li>
+                            <li><a class="dropdown-item" href="#">Dress Anime</a></li>
+                        </ul>
                     </li>
-                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-book"></i> PAGES <i
-                            class="fa-solid fa-angle-down"></i>
+
+                    <li class="d-flex gap-2 align-items-center fw-bold btn dropdown dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown"><i class="fa-solid fa-book-open-reader"></i>
+                        STORIES
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">The Best Healty</a></li>
+                            <li><a class="dropdown-item" href="#">Beginners</a></li>
+
+                        </ul>
                     </li>
-                    <li class="d-flex gap-2 align-items-center fw-bold"><i class="fa-solid fa-user"></i> ABOUT US</li>
+
+                    <li class="d-flex gap-2 align-items-center fw-bold btn dropdown dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown"><i class="fa-solid fa-book"></i> PAGES
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Carousel Figure</a></li>
+                            <li><a class="dropdown-item" href="#">Links Footer</a></li>
+                            <li><a class="dropdown-item" href="#">Contacts Us</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="d-flex gap-2 align-items-center fw-bold btn"><i class="fa-solid fa-user"></i> ABOUT US</li>
+
                 </ul>
+
             </div>
 
             <div class="logo-search"><i class="fa-solid fa-magnifying-glass"></i></div>

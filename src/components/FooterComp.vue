@@ -8,52 +8,13 @@ export default {
         return {
             store,
             imgLogoFooter: './src/assets/img/anime-whitelogo.png',
-            footerLinks: [
-                {
-                    title: 'GET STARTED',
-                    link1: 'Resources',
-                    link2: 'Tutorials',
-                    link3: 'Examples',
-                    link4: 'Docs'
-                },
-                {
-                    title: 'ABOUT',
-                    link1: 'Stories',
-                    link2: 'Community',
-                    link3: 'Blog',
-                    link4: 'Brand Assets'
-                },
-                {
-                    title: 'FEATURES',
-                    link1: 'Overview',
-                    link2: 'Design',
-                    link3: 'Code',
-                    link4: 'Collaborate'
-                },
-                {
-                    title: 'QUICK LINKS',
-                    link1: 'Stories',
-                    link2: 'Community',
-                    link3: 'Blog',
-                    link4: 'Brand Assets'
-                },
-            ]
         };
     },
 
-
-
-
-
-
     created() {
-
-
     },
 
     methods: {
-
-
     },
 };
 
@@ -69,7 +30,7 @@ export default {
             <div class="row group-list">
 
                 <div class="col-8 d-flex gap-5 pe-5 list-link">
-                    <ul v-for="link in footerLinks">
+                    <ul v-for="link in store.footerLinks">
                         <li><a href="">{{ link.title }}</a></li>
                         <li><a href="">{{ link.link1 }}</a></li>
                         <li><a href="">{{ link.link2 }}</a></li>

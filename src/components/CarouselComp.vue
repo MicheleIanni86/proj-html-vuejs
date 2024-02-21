@@ -8,55 +8,16 @@ export default {
         return {
             store,
             imgActive: 0,
-            carouselSlides: [
-                {
-                    image: './src/assets/img/success-story.webp',
-                    title: 'The Best Success Stories',
-                    user: 'Demo',
-                    date: 'January 10, 2024',
-                    badge: 'Culture'
-                },
-                {
-                    image: './src/assets/img/travel-alone.webp',
-                    title: 'Traveling Alone Is Awesome',
-                    user: 'Demo',
-                    date: 'January 26, 2024',
-                    badge: 'Stories'
-                },
-                {
-                    image: './src/assets/img/best-places.webp',
-                    title: 'Places For A Road Trip',
-                    user: 'Demo',
-                    date: 'February 11, 2024',
-                    badge: 'Lifestyle'
-                },
-                {
-                    image: './src/assets/img/music-love.webp',
-                    title: 'Music The Love Of My Life',
-                    user: 'Demo',
-                    date: 'February 20, 2024',
-                    badge: 'Culture'
-                },
-
-            ]
         };
     },
 
-
-
-
-
-
     created() {
-        console.log(this.carouselSlides);
-
     },
 
     methods: {
         clickImage(indexImg) {
             this.imgActive = indexImg;
         },
-
     },
 };
 
@@ -82,19 +43,20 @@ export default {
 
                 <div class="info-principal  ">
                     <div class="d-flex gap-4">
-                        <span class="user-principal"><i class="fa-solid fa-user"></i> {{ carouselSlides[imgActive].user
+                        <span class="user-principal"><i class="fa-solid fa-user"></i> {{
+                            store.carouselSlides[imgActive].user
                         }}</span>
                         <span class="date-principal"><i class="fa-solid fa-calendar-days"></i> {{
-                            carouselSlides[imgActive].date
+                            store.carouselSlides[imgActive].date
                         }}</span>
                     </div>
-                    <div class="title-principal">{{ carouselSlides[imgActive].title }}</div>
+                    <div class="title-principal">{{ store.carouselSlides[imgActive].title }}</div>
                 </div>
-                <div class="badges-principal">{{ carouselSlides[imgActive].badge }}</div>
+                <div class="badges-principal">{{ store.carouselSlides[imgActive].badge }}</div>
 
 
 
-                <img :src="carouselSlides[imgActive].image" alt="" class="slide">
+                <img :src="store.carouselSlides[imgActive].image" alt="" class="slide">
 
             </div>
 
@@ -102,7 +64,7 @@ export default {
             <div class="thumbs container ">
 
                 <!-- THUMB -->
-                <div class="thumb " v-for="(slide, index) in carouselSlides">
+                <div class="thumb " v-for="(slide, index) in store.carouselSlides">
                     <img :src="slide.image" :alt="slide.title" class="allThumb" :class="index == imgActive ? 'attiva' : ''"
                         @click="clickImage(index)" />
                     <div class="d-flex flex-column info-thumb">

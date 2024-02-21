@@ -7,35 +7,19 @@ export default {
     data() {
         return {
             store,
-            cardsPosts: [
-                {
-                    image: 'ideas-anime.webp',
-                    title: 'Live Ideas You Might Be Anime',
-                    date: 'January 12, 2024',
-                    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, alias! Cum distinctio itaque ducimus, delectus quaerat, nam mollitia culpa voluptatem similique, eius fugit et quia architecto aliquid maxime facere! Quo!',
-                    badges: ['Culture', 'Stories']
-                },
-                {
-                    image: 'visit-france.webp',
-                    title: 'Reasons To Visit France',
-                    date: 'January 29, 2024',
-                    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, alias! Cum distinctio itaque ducimus, delectus quaerat, nam mollitia culpa voluptatem similique, eius fugit et quia architecto aliquid maxime facere! Quo!',
-                    badges: ['Lifestyle', 'Travel']
-                },
-                {
-                    image: 'travel-alone.webp',
-                    title: 'Traveling Alone is Awesone',
-                    date: 'February 20, 2024',
-                    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, alias! Cum distinctio itaque ducimus, delectus quaerat, nam mollitia culpa voluptatem similique, eius fugit et quia architecto aliquid maxime facere! Quo!',
-                    badges: ['Stories', 'Travel']
-                },
-            ]
+            readMoreDrop: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quidem ex. Nesciunt illum,
+                                numquam libero temporibus et iste dolore vitae quaerat aspernatur nulla assumenda illo!
+                                Dolorem minima eum dolor eos?
+                                Sunt quam porro numquam recusandae praesentium aliquid dolor pariatur nisi quaerat iste
+                                optio, saepe a voluptatibus quia debitis cupiditate doloribus quae rem quasi tempora
+                                repudiandae dignissimos ut ullam molestias! Consectetur?
+                                Quibusdam praesentium, ipsam officiis qui quasi, omnis explicabo, eum quod illo accusantium
+                                nemo. Quia amet exercitationem tempora, quos, laboriosam dolorum molestias voluptatibus
+                                perspiciatis harum omnis id cumque maiores dignissimos? Quod.`
         };
     },
 
     created() {
-
-
     },
 
     methods: {
@@ -44,12 +28,11 @@ export default {
         },
 
         nextSlide() {
-            this.cardsPosts.push(this.cardsPosts.shift());
+            store.cardsPosts.push(store.cardsPosts.shift());
         },
         prevSlide() {
-            this.cardsPosts.unshift(this.cardsPosts.pop());
+            store.cardsPosts.unshift(store.cardsPosts.pop());
         }
-
     },
 };
 
@@ -68,14 +51,20 @@ export default {
     <div class="container mb-5">
 
         <div class="row">
-            <div class="col-4" v-for="post in cardsPosts">
+            <div class="col-4" v-for="post in store.cardsPosts">
                 <div class="card text-center position-relative">
                     <img :src="getImagePath(post.image)" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-date">{{ post.date }}</p>
                         <p class="card-text">{{ post.description }}</p>
-                        <button href="#" class="btn btn-hover">Read More</button>
+                        <button href="#" class="btn btn-hover dropdown-center" type="button" data-bs-toggle="dropdown">Read
+                            More</button>
+                        <div class="dropdown-menu  p-4  text-body-secondary" style="max-width: 400px;">
+                            <p>{{ readMoreDrop }}</p>
+                            <p class="mb-0 fw-bolder">{{ post.title }}</p>
+                            <p class="mb-0">{{ post.date }}</p>
+                        </div>
                     </div>
                     <div class="budges d-flex gap-4">
                         <span v-for="badge in post.badges">{{ badge }}</span>
