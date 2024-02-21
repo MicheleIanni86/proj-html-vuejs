@@ -37,15 +37,15 @@ export default {
             </div>
 
             <div class="change-updates d-flex gap-4 align-items-center me-5">
-                <i class="fa-solid fa-angle-left" style="color: #ffffff;"></i>
-                <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-angle-right"></i>
             </div>
 
             <div class="logos-socials d-flex align-items-center gap-2">
-                <div><i class="fa-brands fa-facebook-f" style="color: #bf1d2e;"></i></div>
-                <div><i class="fa-brands fa-twitter" style="color: #bf1d2e;"></i></div>
-                <div><i class="fa-brands fa-instagram" style="color: #bf1d2e;"></i></div>
-                <div><i class="fa-brands fa-youtube" style="color: #bf1d2e;"></i></div>
+                <div class="logos"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="logos"><i class="fa-brands fa-twitter"></i></div>
+                <div class="logos"><i class="fa-brands fa-instagram"></i></div>
+                <div class="logos"><i class="fa-brands fa-youtube"></i></div>
             </div>
         </div>
     </div>
@@ -123,15 +123,23 @@ export default {
         font-weight: bold;
         padding-left: 10px;
         margin: 0;
-
-        i {
-            color: #bf1d2e;
-        }
     }
 }
 
+.change-updates {
+    i {
+        cursor: pointer;
+        color: white;
+    }
+
+    i:hover {
+        color: #333333;
+    }
+
+}
+
 .logos-socials {
-    div {
+    .logos {
         background-color: white;
         height: 30px;
         aspect-ratio: 1;
@@ -139,6 +147,13 @@ export default {
         line-height: 30px;
         border-radius: 50%;
         cursor: pointer;
+        color: #bf1d2e;
+
+    }
+
+    .logos:hover {
+        background-color: #333333;
+        color: white;
 
     }
 }
