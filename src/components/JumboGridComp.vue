@@ -77,7 +77,7 @@ export default {
             <div class="col-3 d-flex flex-column justify-content-between p-0 gap-2">
                 <div class="left-jumbo-top">
                     <!-- Immagine -->
-                    <img :src="getImagePath(cardsJumbo[0].image)" class="img-fluid h-100 mb-2 rounded"
+                    <img :src="getImagePath(cardsJumbo[0].image)" class="img-fluid h-100 mb-2 rounded opacity-hover"
                         :alt="cardsJumbo[0].title">
                     <!-- Data e Titolo -->
                     <div class="info text-center">
@@ -93,7 +93,7 @@ export default {
                 </div>
                 <div class="left-jumbo-bottom">
                     <!-- Immagine -->
-                    <img :src="getImagePath(cardsJumbo[1].image)" class="img-fluid h-100 rounded"
+                    <img :src="getImagePath(cardsJumbo[1].image)" class="img-fluid h-100 rounded opacity-hover"
                         :alt="cardsJumbo[1].title">
                     <!-- Data e Titolo -->
                     <div class="info text-center">
@@ -114,7 +114,8 @@ export default {
             <!-- Immagine centrale -->
             <div class="col-6 center-jumbo p-0">
                 <!-- Immagine -->
-                <img :src="getImagePath(cardsJumbo[2].image)" class="img-fluid h-100 rounded" :alt="cardsJumbo[2].title">
+                <img :src="getImagePath(cardsJumbo[2].image)" class="img-fluid h-100 rounded opacity-hover"
+                    :alt="cardsJumbo[2].title">
                 <!-- Data e Titolo -->
                 <div class="info text-center">
                     <span><i class="fa-solid fa-user"></i> {{ cardsJumbo[2].user }}</span>
@@ -133,7 +134,7 @@ export default {
             <div class="col-3 d-flex flex-column justify-content-between p-0 gap-2">
                 <div class="right-jumbo-top">
                     <!-- Immagine -->
-                    <img :src="getImagePath(cardsJumbo[3].image)" class="img-fluid h-100 mb-2 rounded"
+                    <img :src="getImagePath(cardsJumbo[3].image)" class="img-fluid h-100 mb-2 rounded opacity-hover"
                         :alt="cardsJumbo[3].title">
                     <!-- Data e Titolo -->
                     <div class="info text-center">
@@ -149,7 +150,7 @@ export default {
                 </div>
                 <div class="right-jumbo-bottom">
                     <!-- Immagine -->
-                    <img :src="getImagePath(cardsJumbo[4].image)" class="img-fluid h-100 rounded"
+                    <img :src="getImagePath(cardsJumbo[4].image)" class="img-fluid h-100 rounded opacity-hover"
                         :alt="cardsJumbo[4].title">
                     <!-- Data e Titolo -->
                     <div class="info text-center">
@@ -220,6 +221,17 @@ export default {
             font-size: 14px;
             font-weight: bolder;
         }
+    }
+}
+
+.row {
+    .opacity-hover {
+        opacity: 0.4;
+        cursor: pointer;
+    }
+
+    .opacity-hover:hover {
+        opacity: 1;
     }
 }
 </style>
